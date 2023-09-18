@@ -1,0 +1,21 @@
+<?php
+session_start();
+$page=$_GET['page'];
+$id=$_GET['id'];
+if(strcmp($page,'book')==0)
+{
+    $_SESSION['book']=$id;
+    $book=array();
+    $book[]=$_SESSION['book'];
+    $_SESSION['bookarray']=$book;
+    header("Location:book.html");
+}
+else
+{
+    $_SESSION['cd']=$id;
+    $cd=array();
+    $cd[]=$_SESSION['cd'];
+    $_SESSION['cdarray']=$cd;
+    header("Location:cd.html");
+}
+?>
