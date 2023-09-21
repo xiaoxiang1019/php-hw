@@ -1,0 +1,36 @@
+<?php
+$times=0;
+$array=array();
+$num;
+$str="";
+for($i=0;$i<10;$i++)
+{
+    for($j=0;$j<=2;$j++)
+    {
+        $num=rand(1,9);
+        $array[$j]=$num;
+    }
+    print_r($array);
+    echo "</br>";
+}
+/*do
+{ 
+    $a=rand(1,9);
+    $b=rand(1,9);
+    $c=rand(1,9);
+    $abs1=$b-$a;
+    $abs2=$c-$b;
+    if($abs1==$abs2)
+    {
+        $str.=$times."=".$a.",".$b.",".$c."<br>";
+        break;
+    }
+    else
+    {
+        $str.=$times."=".$a.",".$b.",".$c."<br>";
+        $times++;
+    }
+}
+while($times<>10);*/
+
+?>
