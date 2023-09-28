@@ -59,7 +59,7 @@
                     echo $str;
                     echo "</br>";
                     $sqlturn="INSERT INTO `mydetail`(`id`, `turn`, `rec`)";
-                    $sqlturn.="VALUES (NOW(),'$times','$numstr')";
+                    $sqlturn.="VALUES (date('ymdhs'),'$times','$numstr')";
                     if(mysqli_query($link,$sqlturn)){};
                 }
                 sleep(0.1);
