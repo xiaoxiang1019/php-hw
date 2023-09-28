@@ -48,7 +48,7 @@
                     echo $str;
                     echo "</br>";
                     $sqlturn="INSERT INTO `mydetail`(`id`, `turn`, `rec`)";
-                    $sqlturn.="VALUES (NOW(),'$times','$numstr')";
+                    $sqlturn.="VALUES (date('ymdhs'),'$times','$numstr')";
                     if(mysqli_query($link,$sqlturn)){};
                     break;
                 }
@@ -68,7 +68,7 @@
             }
             echo "總共測試".$times."次或是找到數字";
             $sql="INSERT INTO `mymaster`(`id`, `freq`)"; 
-            $sql.="VALUES (NOW(),'$times')";
+            $sql.="VALUES (date('ymdhs'),'$times')";
             if(mysqli_query($link,$sql)){};
         }
         session_destroy();
